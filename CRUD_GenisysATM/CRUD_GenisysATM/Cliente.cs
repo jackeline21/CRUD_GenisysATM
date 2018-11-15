@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace CRUD_GenisysATM
 {
-    public partial class Form1 : Form
+    public partial class Cliente : MaterialForm
     {
-        public Form1()
+        public Cliente()
         {
             InitializeComponent();
         }
+
+
     }
 }
