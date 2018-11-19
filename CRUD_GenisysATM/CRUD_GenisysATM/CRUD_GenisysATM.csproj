@@ -49,33 +49,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Cliente.cs" />
-    <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Clases\Configuracion.cs" />
-    <Compile Include="Clases\CuentaCliente.cs" />
-    <Compile Include="Clases\CustomException.cs" />
-    <Compile Include="Clases\ServicioCliente.cs" />
-    <Compile Include="Clases\ServicioPublico.cs" />
-    <Compile Include="Clases\TarjetaCredito.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
+    <Compile Include="Cliente.designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Configuraciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Configuraciones.designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="CuentaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentaCliente.designer.cs">
+      <DependentUpon>CuentaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu1.Designer.cs">
+      <DependentUpon>Menu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ATM.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Conexion.cs" />
+    <Compile Include="Models\Configuracion.cs" />
+    <Compile Include="Models\CuentaCliente.cs" />
+    <Compile Include="Models\CustomException.cs" />
+    <Compile Include="Models\ServicioCliente.cs" />
+    <Compile Include="Models\ServicioPublico.cs" />
+    <Compile Include="Models\TarjetaCredito.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicioCliente.designer.cs">
+      <DependentUpon>ServicioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioPublico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicioPublico.designer.cs">
+      <DependentUpon>ServicioPublico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetasCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarjetasCredito.designer.cs">
+      <DependentUpon>TarjetasCredito.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentaCliente.resx">
+      <DependentUpon>CuentaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu1.resx">
+      <DependentUpon>Menu1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +123,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ServicioCliente.resx">
+      <DependentUpon>ServicioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioPublico.resx">
+      <DependentUpon>ServicioPublico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarjetasCredito.resx">
+      <DependentUpon>TarjetasCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

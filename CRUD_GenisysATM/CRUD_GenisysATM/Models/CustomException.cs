@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenisysATM.Models
+namespace CRUD_GenisysATM.Models
 {
     class CustomException : Exception
     {

@@ -28,313 +28,250 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nombreTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.nombresLb = new MaterialSkin.Controls.MaterialLabel();
-            this.apellidosLb = new MaterialSkin.Controls.MaterialLabel();
-            this.identidadLb = new MaterialSkin.Controls.MaterialLabel();
-            this.direccionLb = new MaterialSkin.Controls.MaterialLabel();
-            this.celularLb = new MaterialSkin.Controls.MaterialLabel();
-            this.telefonoLb = new MaterialSkin.Controls.MaterialLabel();
-            this.apellidosTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.identidadTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.direccionTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.telefonoTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.CelularTxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.clienteDgv = new System.Windows.Forms.DataGridView();
-            this.listarBtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.actualizarBtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.buscarBtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.crearBtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.eliminarBtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDgv)).BeginInit();
+            this.lstClientes = new System.Windows.Forms.ListBox();
+            this.lblIdentidad = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.txtIdentidad = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nombreTxt
+            // lstClientes
             // 
-            this.nombreTxt.Depth = 0;
-            this.nombreTxt.Hint = "";
-            this.nombreTxt.Location = new System.Drawing.Point(105, 78);
-            this.nombreTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nombreTxt.Name = "nombreTxt";
-            this.nombreTxt.PasswordChar = '\0';
-            this.nombreTxt.SelectedText = "";
-            this.nombreTxt.SelectionLength = 0;
-            this.nombreTxt.SelectionStart = 0;
-            this.nombreTxt.Size = new System.Drawing.Size(211, 23);
-            this.nombreTxt.TabIndex = 0;
-            this.nombreTxt.UseSystemPasswordChar = false;
+            this.lstClientes.FormattingEnabled = true;
+            this.lstClientes.Location = new System.Drawing.Point(466, 80);
+            this.lstClientes.Name = "lstClientes";
+            this.lstClientes.Size = new System.Drawing.Size(298, 238);
+            this.lstClientes.TabIndex = 1;
+            this.lstClientes.Click += new System.EventHandler(this.lstClientes_Click);
             // 
-            // nombresLb
+            // lblIdentidad
             // 
-            this.nombresLb.AutoSize = true;
-            this.nombresLb.Depth = 0;
-            this.nombresLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.nombresLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nombresLb.Location = new System.Drawing.Point(11, 82);
-            this.nombresLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nombresLb.Name = "nombresLb";
-            this.nombresLb.Size = new System.Drawing.Size(71, 19);
-            this.nombresLb.TabIndex = 1;
-            this.nombresLb.Text = "Nombres";
+            this.lblIdentidad.AutoSize = true;
+            this.lblIdentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentidad.Location = new System.Drawing.Point(23, 97);
+            this.lblIdentidad.Name = "lblIdentidad";
+            this.lblIdentidad.Size = new System.Drawing.Size(64, 16);
+            this.lblIdentidad.TabIndex = 2;
+            this.lblIdentidad.Text = "Identidad";
             // 
-            // apellidosLb
+            // lblNombre
             // 
-            this.apellidosLb.AutoSize = true;
-            this.apellidosLb.Depth = 0;
-            this.apellidosLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.apellidosLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.apellidosLb.Location = new System.Drawing.Point(13, 128);
-            this.apellidosLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.apellidosLb.Name = "apellidosLb";
-            this.apellidosLb.Size = new System.Drawing.Size(72, 19);
-            this.apellidosLb.TabIndex = 2;
-            this.apellidosLb.Text = "Apellidos";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(23, 130);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(67, 16);
+            this.lblNombre.TabIndex = 3;
+            this.lblNombre.Text = "Nombres:";
             // 
-            // identidadLb
+            // lblApellido
             // 
-            this.identidadLb.AutoSize = true;
-            this.identidadLb.Depth = 0;
-            this.identidadLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.identidadLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.identidadLb.Location = new System.Drawing.Point(13, 173);
-            this.identidadLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.identidadLb.Name = "identidadLb";
-            this.identidadLb.Size = new System.Drawing.Size(70, 19);
-            this.identidadLb.TabIndex = 3;
-            this.identidadLb.Text = "Identidad";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(23, 163);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(68, 16);
+            this.lblApellido.TabIndex = 4;
+            this.lblApellido.Text = "Apellidos:";
             // 
-            // direccionLb
+            // lblDireccion
             // 
-            this.direccionLb.AutoSize = true;
-            this.direccionLb.Depth = 0;
-            this.direccionLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.direccionLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.direccionLb.Location = new System.Drawing.Point(9, 224);
-            this.direccionLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.direccionLb.Name = "direccionLb";
-            this.direccionLb.Size = new System.Drawing.Size(73, 19);
-            this.direccionLb.TabIndex = 4;
-            this.direccionLb.Text = "Dirección";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(23, 196);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(68, 16);
+            this.lblDireccion.TabIndex = 5;
+            this.lblDireccion.Text = "Dirección:";
             // 
-            // celularLb
+            // lblTelefono
             // 
-            this.celularLb.AutoSize = true;
-            this.celularLb.Depth = 0;
-            this.celularLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.celularLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.celularLb.Location = new System.Drawing.Point(11, 331);
-            this.celularLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.celularLb.Name = "celularLb";
-            this.celularLb.Size = new System.Drawing.Size(56, 19);
-            this.celularLb.TabIndex = 5;
-            this.celularLb.Text = "Celular";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(23, 229);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(65, 16);
+            this.lblTelefono.TabIndex = 6;
+            this.lblTelefono.Text = "Teléfono:\r\n";
             // 
-            // telefonoLb
+            // lblCelular
             // 
-            this.telefonoLb.AutoSize = true;
-            this.telefonoLb.Depth = 0;
-            this.telefonoLb.Font = new System.Drawing.Font("Roboto", 11F);
-            this.telefonoLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.telefonoLb.Location = new System.Drawing.Point(13, 276);
-            this.telefonoLb.MouseState = MaterialSkin.MouseState.HOVER;
-            this.telefonoLb.Name = "telefonoLb";
-            this.telefonoLb.Size = new System.Drawing.Size(69, 19);
-            this.telefonoLb.TabIndex = 6;
-            this.telefonoLb.Text = "Teléfono";
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.Location = new System.Drawing.Point(23, 262);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(53, 16);
+            this.lblCelular.TabIndex = 7;
+            this.lblCelular.Text = "Celular:";
             // 
-            // apellidosTxt
+            // txtIdentidad
             // 
-            this.apellidosTxt.Depth = 0;
-            this.apellidosTxt.Hint = "";
-            this.apellidosTxt.Location = new System.Drawing.Point(105, 124);
-            this.apellidosTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.apellidosTxt.Name = "apellidosTxt";
-            this.apellidosTxt.PasswordChar = '\0';
-            this.apellidosTxt.SelectedText = "";
-            this.apellidosTxt.SelectionLength = 0;
-            this.apellidosTxt.SelectionStart = 0;
-            this.apellidosTxt.Size = new System.Drawing.Size(211, 23);
-            this.apellidosTxt.TabIndex = 7;
-            this.apellidosTxt.UseSystemPasswordChar = false;
+            this.txtIdentidad.Location = new System.Drawing.Point(97, 97);
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.Size = new System.Drawing.Size(326, 20);
+            this.txtIdentidad.TabIndex = 8;
+            this.txtIdentidad.Leave += new System.EventHandler(this.txtIdentidad_Leave);
             // 
-            // identidadTxt
+            // txtNombres
             // 
-            this.identidadTxt.Depth = 0;
-            this.identidadTxt.Hint = "";
-            this.identidadTxt.Location = new System.Drawing.Point(105, 169);
-            this.identidadTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.identidadTxt.Name = "identidadTxt";
-            this.identidadTxt.PasswordChar = '\0';
-            this.identidadTxt.SelectedText = "";
-            this.identidadTxt.SelectionLength = 0;
-            this.identidadTxt.SelectionStart = 0;
-            this.identidadTxt.Size = new System.Drawing.Size(211, 23);
-            this.identidadTxt.TabIndex = 8;
-            this.identidadTxt.UseSystemPasswordChar = false;
+            this.txtNombres.Location = new System.Drawing.Point(97, 130);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(326, 20);
+            this.txtNombres.TabIndex = 9;
             // 
-            // direccionTxt
+            // txtApellidos
             // 
-            this.direccionTxt.Depth = 0;
-            this.direccionTxt.Hint = "";
-            this.direccionTxt.Location = new System.Drawing.Point(105, 220);
-            this.direccionTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.direccionTxt.Name = "direccionTxt";
-            this.direccionTxt.PasswordChar = '\0';
-            this.direccionTxt.SelectedText = "";
-            this.direccionTxt.SelectionLength = 0;
-            this.direccionTxt.SelectionStart = 0;
-            this.direccionTxt.Size = new System.Drawing.Size(211, 23);
-            this.direccionTxt.TabIndex = 9;
-            this.direccionTxt.UseSystemPasswordChar = false;
+            this.txtApellidos.Location = new System.Drawing.Point(97, 163);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(326, 20);
+            this.txtApellidos.TabIndex = 10;
             // 
-            // telefonoTxt
+            // txtDireccion
             // 
-            this.telefonoTxt.Depth = 0;
-            this.telefonoTxt.Hint = "";
-            this.telefonoTxt.Location = new System.Drawing.Point(105, 272);
-            this.telefonoTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.telefonoTxt.Name = "telefonoTxt";
-            this.telefonoTxt.PasswordChar = '\0';
-            this.telefonoTxt.SelectedText = "";
-            this.telefonoTxt.SelectionLength = 0;
-            this.telefonoTxt.SelectionStart = 0;
-            this.telefonoTxt.Size = new System.Drawing.Size(211, 23);
-            this.telefonoTxt.TabIndex = 10;
-            this.telefonoTxt.UseSystemPasswordChar = false;
+            this.txtDireccion.Location = new System.Drawing.Point(97, 196);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(326, 20);
+            this.txtDireccion.TabIndex = 11;
             // 
-            // CelularTxt
+            // txtTelefono
             // 
-            this.CelularTxt.Depth = 0;
-            this.CelularTxt.Hint = "";
-            this.CelularTxt.Location = new System.Drawing.Point(105, 327);
-            this.CelularTxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CelularTxt.Name = "CelularTxt";
-            this.CelularTxt.PasswordChar = '\0';
-            this.CelularTxt.SelectedText = "";
-            this.CelularTxt.SelectionLength = 0;
-            this.CelularTxt.SelectionStart = 0;
-            this.CelularTxt.Size = new System.Drawing.Size(211, 23);
-            this.CelularTxt.TabIndex = 11;
-            this.CelularTxt.UseSystemPasswordChar = false;
+            this.txtTelefono.Location = new System.Drawing.Point(97, 229);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(326, 20);
+            this.txtTelefono.TabIndex = 12;
             // 
-            // clienteDgv
+            // txtCelular
             // 
-            this.clienteDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDgv.Location = new System.Drawing.Point(359, 78);
-            this.clienteDgv.Name = "clienteDgv";
-            this.clienteDgv.Size = new System.Drawing.Size(390, 272);
-            this.clienteDgv.TabIndex = 12;
+            this.txtCelular.Location = new System.Drawing.Point(97, 262);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(326, 20);
+            this.txtCelular.TabIndex = 13;
             // 
-            // listarBtn
+            // btnSalir
             // 
-            this.listarBtn.Depth = 0;
-            this.listarBtn.Location = new System.Drawing.Point(190, 396);
-            this.listarBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.listarBtn.Name = "listarBtn";
-            this.listarBtn.Primary = true;
-            this.listarBtn.Size = new System.Drawing.Size(104, 23);
-            this.listarBtn.TabIndex = 13;
-            this.listarBtn.Text = "Listar";
-            this.listarBtn.UseVisualStyleBackColor = true;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.LightCoral;
+            this.btnSalir.Location = new System.Drawing.Point(37, 379);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(141, 30);
+            this.btnSalir.TabIndex = 16;
+            this.btnSalir.Text = "Regresar";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // actualizarBtn
+            // btnEliminar
             // 
-            this.actualizarBtn.Depth = 0;
-            this.actualizarBtn.Location = new System.Drawing.Point(495, 396);
-            this.actualizarBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.actualizarBtn.Name = "actualizarBtn";
-            this.actualizarBtn.Primary = true;
-            this.actualizarBtn.Size = new System.Drawing.Size(104, 23);
-            this.actualizarBtn.TabIndex = 14;
-            this.actualizarBtn.Text = "Actualizar";
-            this.actualizarBtn.UseVisualStyleBackColor = true;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.LightCoral;
+            this.btnEliminar.Location = new System.Drawing.Point(602, 379);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(146, 30);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // buscarBtn
+            // btnEditar
             // 
-            this.buscarBtn.Depth = 0;
-            this.buscarBtn.Location = new System.Drawing.Point(341, 396);
-            this.buscarBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.buscarBtn.Name = "buscarBtn";
-            this.buscarBtn.Primary = true;
-            this.buscarBtn.Size = new System.Drawing.Size(104, 23);
-            this.buscarBtn.TabIndex = 15;
-            this.buscarBtn.Text = "Buscar";
-            this.buscarBtn.UseVisualStyleBackColor = true;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.LightCoral;
+            this.btnEditar.Location = new System.Drawing.Point(217, 379);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(143, 30);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Actualizar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // crearBtn
+            // btnAgregar
             // 
-            this.crearBtn.Depth = 0;
-            this.crearBtn.Location = new System.Drawing.Point(30, 396);
-            this.crearBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.crearBtn.Name = "crearBtn";
-            this.crearBtn.Primary = true;
-            this.crearBtn.Size = new System.Drawing.Size(104, 23);
-            this.crearBtn.TabIndex = 16;
-            this.crearBtn.Text = "Crear";
-            this.crearBtn.UseVisualStyleBackColor = true;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.LightCoral;
+            this.btnAgregar.Location = new System.Drawing.Point(412, 379);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(146, 30);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Guardar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // eliminarBtn
+            // label1
             // 
-            this.eliminarBtn.Depth = 0;
-            this.eliminarBtn.Location = new System.Drawing.Point(660, 396);
-            this.eliminarBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.eliminarBtn.Name = "eliminarBtn";
-            this.eliminarBtn.Primary = true;
-            this.eliminarBtn.Size = new System.Drawing.Size(104, 23);
-            this.eliminarBtn.TabIndex = 17;
-            this.eliminarBtn.Text = "Eliminar";
-            this.eliminarBtn.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 312);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 30);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "ELIJA UNA OPCIÓN:";
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.eliminarBtn);
-            this.Controls.Add(this.crearBtn);
-            this.Controls.Add(this.buscarBtn);
-            this.Controls.Add(this.actualizarBtn);
-            this.Controls.Add(this.listarBtn);
-            this.Controls.Add(this.clienteDgv);
-            this.Controls.Add(this.CelularTxt);
-            this.Controls.Add(this.telefonoTxt);
-            this.Controls.Add(this.direccionTxt);
-            this.Controls.Add(this.identidadTxt);
-            this.Controls.Add(this.apellidosTxt);
-            this.Controls.Add(this.telefonoLb);
-            this.Controls.Add(this.celularLb);
-            this.Controls.Add(this.direccionLb);
-            this.Controls.Add(this.identidadLb);
-            this.Controls.Add(this.apellidosLb);
-            this.Controls.Add(this.nombresLb);
-            this.Controls.Add(this.nombreTxt);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtIdentidad);
+            this.Controls.Add(this.lblCelular);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblIdentidad);
+            this.Controls.Add(this.lstClientes);
             this.Name = "Cliente";
-            this.Text = "Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDgv)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cajeros Automáticos Genisys ATM";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialSingleLineTextField nombreTxt;
-        private MaterialSkin.Controls.MaterialLabel nombresLb;
-        private MaterialSkin.Controls.MaterialLabel apellidosLb;
-        private MaterialSkin.Controls.MaterialLabel identidadLb;
-        private MaterialSkin.Controls.MaterialLabel direccionLb;
-        private MaterialSkin.Controls.MaterialLabel celularLb;
-        private MaterialSkin.Controls.MaterialLabel telefonoLb;
-        private MaterialSkin.Controls.MaterialSingleLineTextField apellidosTxt;
-        private MaterialSkin.Controls.MaterialSingleLineTextField identidadTxt;
-        private MaterialSkin.Controls.MaterialSingleLineTextField direccionTxt;
-        private MaterialSkin.Controls.MaterialSingleLineTextField telefonoTxt;
-        private MaterialSkin.Controls.MaterialSingleLineTextField CelularTxt;
-        private System.Windows.Forms.DataGridView clienteDgv;
-        private MaterialSkin.Controls.MaterialRaisedButton listarBtn;
-        private MaterialSkin.Controls.MaterialRaisedButton actualizarBtn;
-        private MaterialSkin.Controls.MaterialRaisedButton buscarBtn;
-        private MaterialSkin.Controls.MaterialRaisedButton crearBtn;
-        private MaterialSkin.Controls.MaterialRaisedButton eliminarBtn;
+        private System.Windows.Forms.ListBox lstClientes;
+        private System.Windows.Forms.Label lblIdentidad;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.TextBox txtIdentidad;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label1;
     }
 }

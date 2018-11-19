@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace GenisysATM.Models
+namespace CRUD_GenisysATM.Models
 {
     class Conexion
     {
@@ -28,18 +28,12 @@ namespace GenisysATM.Models
             EstablecerConexion();
         }
 
-        // Métodos
-        /// <summary>
-        /// Realiza una conexión al servidor de base de datos.
-        /// Requiere el nombre del servidor más la instancia del mismo.
-        /// Requiere el nombre de la base de datos a inicializar.
-        /// </summary>
         public void EstablecerConexion()
         {
             try
             {
-                conn = new SqlConnection(@"server = (local)\sqlexpress;" +
-                    "integrated security = true; database = GenisysATM_V2");
+                conn = new SqlConnection(@"server = " + servidor + ";" +
+                    "integrated security = true; database = " + baseDatos + ";");
 
                 // Establecer conexión
                 conn.Open();
@@ -50,10 +44,6 @@ namespace GenisysATM.Models
             }
         }
 
-        /// <summary>
-        /// Ejecuta un comando SQL.
-        /// </summary>
-        /// <param name="elComando">El query SQL a ejecutar</param>
         public SqlCommand EjecutarComando(string elComando)
         {
             return cmd = new SqlCommand(elComando, conn);
